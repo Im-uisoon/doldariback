@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 // 엔드포인트 주소
-                .allowedOrigins("http://localhost:5173", "https://im-uisoon.github.io/doldari/")
+                .allowedOrigins("https://im-uisoon.github.io", "https://im-uisoon.github.io/doldari/")
 
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
