@@ -30,10 +30,7 @@ public class WebConfig implements WebMvcConfigurer {
             sessionCookieConfig.setSecure(true);            // HTTPS 환경에서만
             sessionCookieConfig.setName("JSESSIONID");      // 기본 세션 이름
             sessionCookieConfig.setPath("/");               // 전체 경로에서 쿠키 전달
-            sessionCookieConfig.setComment("Cross-domain session cookie");
             sessionCookieConfig.setMaxAge(-1);              // 브라우저 종료 시까지
-            // SameSite=None 적용
-            sessionCookieConfig.setComment("SameSite=None"); // 일부 톰캣 버전용
         };
     }
 }
